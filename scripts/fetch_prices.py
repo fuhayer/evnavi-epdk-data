@@ -16,16 +16,21 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.parse
 import urllib.request
+import urllib.robotparser
 from datetime import datetime, timezone
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari/605.1.15"
+# robots.txt kontrolünde kendimizi bu adla tanıtırız.
+BOT_NAME = "evnavi-epdk-data"
 NUM = r"(\d{1,2}[.,]\d{1,2})"
 
-# brand: EPDK verisindeki "marka" alanı. Desenler sayfanın düz metni üzerinde çalışır;
-# her desen 1 (tek fiyat) veya 2 (en düşük–en yüksek) sayı yakalar.
+# brand: EPDK verisindeki "marka" alanı. Desenler sayfanın düz metni üzerinde çalışır ("raw": True ise
+# sayfaya gömülü veri dahil ham HTML üzerinde); her desen 1 (tek fiyat) veya 2 (en düşük–en yüksek) sayı yakalar.
+# Not: Eşarj (esarj.com) robots.txt ile tüm otomatik erişimi yasakladığı için listede yoktur.
 OPERATORS = [
     {"brand": "zes", "url": "https://zes.net/tr/fiyatlandirma",
      "ac": rf"AC\s*{NUM}\s*₺",
@@ -51,6 +56,10 @@ OPERATORS = [
     {"brand": "beefull", "url": "https://beefull.com/tarifeler/elektrikli-arac-tarifesi/",
      "ac": rf"AC SOKET TARİFESİ\s*Fiyat\s*/\s*Birim\s*{NUM}\s*TL",
      "dc": rf"DC SOKET TARİFESİ\s*Fiyat\s*/\s*Birim\s*{NUM}\s*TL"},
+    {"brand": "ovolt", "url": "https://ovolt.com.tr/tarifeler", "raw": True,
+     "ac": rf'"currentType":"AC","oldPrice":"[^"]*","currentPrice":"{NUM}\s*TL',
+     "dc": rf'"currentType":"DC","oldPrice":"[^"]*","currentPrice":"{NUM}\s*TL\s*-\s*{NUM}\s*TL',
+     "note": "Seçili lokasyonlarda kampanyalı fiyat uygulanabilir."},
 ]
 
 
@@ -60,10 +69,26 @@ def norm(s: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", "".join(c for c in s if not unicodedata.combining(c)))
 
 
-def page_text(url: str) -> str:
+def robots_allows(url: str) -> bool:
+    """Sitenin robots.txt kuralları bu sayfaya otomatik erişime izin veriyor mu? (Dosya yoksa izinli sayılır.)"""
+    parts = urllib.parse.urlparse(url)
+    parser = urllib.robotparser.RobotFileParser()
+    try:
+        req = urllib.request.Request(f"{parts.scheme}://{parts.netloc}/robots.txt", headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            parser.parse(r.read().decode("utf-8", "ignore").splitlines())
+    except Exception:  # noqa: BLE001 - robots.txt yok/okunamıyor
+        return True
+    return parser.can_fetch(BOT_NAME, url)
+
+
+def page_text(url: str, raw: bool = False) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "tr"})
     with urllib.request.urlopen(req, timeout=30) as r:
         body = r.read().decode("utf-8", "ignore")
+    if raw:
+        # Next.js gibi sitelerde veri, kaçışlı JSON olarak <script> içinde gömülüdür.
+        return body.replace('\\"', '"')
     body = re.sub(r"(?s)<(script|style).*?</\1>|<[^>]+>", " ", body)
     return re.sub(r"\s+", " ", html.unescape(body))
 
@@ -105,7 +130,9 @@ def main() -> int:
         entry = {"brand": op["brand"], "brandKey": key, "operatorName": names.get(key),
                  "operatorKey": norm(names.get(key, "")), "source": op["url"], "note": op.get("note")}
         try:
-            text = page_text(op["url"])
+            if not robots_allows(op["url"]):
+                raise PermissionError("robots.txt otomatik erişime izin vermiyor")
+            text = page_text(op["url"], raw=op.get("raw", False))
             entry.update(ac=parse_range(op.get("ac"), text), dc=parse_range(op.get("dc"), text),
                          checkedAt=today, stale=False)
             print(f"✓ {op['brand']}: AC {entry['ac']} DC {entry['dc']}")

@@ -127,6 +127,24 @@
    },
    "checkedAt": "2026-10-29",
    "stale": false
+  },
+  {
+   "brand": "ovolt",
+   "brandKey": "OVOLT",
+   "operatorName": "OVOLT ŞARJ TEKNOLOJİLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "OVOLTSARJTEKNOLOJILERISANAYIVETICARETANONIMSIRKETI",
+   "source": "https://ovolt.com.tr/tarifeler",
+   "note": "Seçili lokasyonlarda kampanyalı fiyat uygulanabilir.",
+   "ac": {
+    "min": 9.99,
+    "max": 9.99
+   },
+   "dc": {
+    "min": 10.49,
+    "max": 14.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
   }
  ]
 }
