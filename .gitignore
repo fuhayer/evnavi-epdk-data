@@ -1,0 +1,4 @@
+__pycache__/
+*.raw.json
+raw.json
+.DS_Store
