@@ -145,6 +145,276 @@
    },
    "checkedAt": "2026-10-29",
    "stale": false
+  },
+  {
+   "brand": "ASTOR",
+   "brandKey": "ASTOR",
+   "operatorName": "ASTOR ENERJİ ANONİM ŞİRKETİ",
+   "operatorKey": "ASTORENERJIANONIMSIRKETI",
+   "source": "https://astorsarj.com.tr",
+   "note": null,
+   "ac": {
+    "min": 9.89,
+    "max": 9.89
+   },
+   "dc": {
+    "min": 13.99,
+    "max": 13.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "AKSA ŞARJ",
+   "brandKey": "AKSASARJ",
+   "operatorName": "AKSA MÜŞTERİ ÇÖZÜMLERİ ANONİM ŞİRKETİ",
+   "operatorKey": "AKSAMUSTERICOZUMLERIANONIMSIRKETI",
+   "source": "https://www.aksasarj.com.tr/ucretler",
+   "note": "Fiyatlar lokasyona göre değişebilir.",
+   "ac": {
+    "min": 9.9,
+    "max": 10.9
+   },
+   "dc": {
+    "min": 11.99,
+    "max": 13.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "MKS-ŞARJ",
+   "brandKey": "MKSSARJ",
+   "operatorName": "MAKSEM ELEKTRO ŞARJ ANONİM ŞİRKETİ",
+   "operatorKey": "MAKSEMELEKTROSARJANONIMSIRKETI",
+   "source": "https://mkssarj.com/tarife",
+   "note": null,
+   "ac": {
+    "min": 9.49,
+    "max": 9.49
+   },
+   "dc": {
+    "min": 13.99,
+    "max": 13.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "MİGGO",
+   "brandKey": "MIGGO",
+   "operatorName": "MİGEN ENERJİ VE ELEKTRİKLİ ARAÇ ŞARJ HİZMETLERİ ANONİM ŞİRKETİ",
+   "operatorKey": "MIGENENERJIVEELEKTRIKLIARACSARJHIZMETLERIANONIMSIRKETI",
+   "source": "https://www.mig-go.com",
+   "note": null,
+   "ac": {
+    "min": 9.5,
+    "max": 9.5
+   },
+   "dc": {
+    "min": 12.5,
+    "max": 12.5
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "NEVA ŞARJ",
+   "brandKey": "NEVASARJ",
+   "operatorName": "NEVA İÇ VE DIŞ TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "NEVAICVEDISTICARETANONIMSIRKETI",
+   "source": "https://nevasarj.com/sayfalar/istasyonlarimiz/arac-sarj-ac-dc-kwh-fiyat-tarifeleri.html",
+   "note": null,
+   "ac": {
+    "min": 9.9,
+    "max": 9.9
+   },
+   "dc": {
+    "min": 13.9,
+    "max": 13.9
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "i-şarj",
+   "brandKey": "ISARJ",
+   "operatorName": "İSPİRLİ ŞARJ HİZMETLERİ TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "ISPIRLISARJHIZMETLERITICARETANONIMSIRKETI",
+   "source": "https://www.isarj.com/tarifeler/",
+   "note": null,
+   "ac": {
+    "min": 9.98,
+    "max": 9.98
+   },
+   "dc": {
+    "min": 13.49,
+    "max": 13.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "ŞarjMatik",
+   "brandKey": "SARJMATIK",
+   "operatorName": "ŞARJMATİK ENERJİ BİLİŞİM LİMİTED ŞİRKETİ",
+   "operatorKey": "SARJMATIKENERJIBILISIMLIMITEDSIRKETI",
+   "source": "https://sarjmatik.com.tr/ChargingPrices/",
+   "note": null,
+   "ac": {
+    "min": 9.99,
+    "max": 9.99
+   },
+   "dc": {
+    "min": 12.5,
+    "max": 12.5
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "ŞARJON",
+   "brandKey": "SARJON",
+   "operatorName": "ŞARJON YENİLENEBİLİR ENERJİ VE ELEKTRİKLİ ARAÇ ŞARJ SİSTEMLERİ TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "SARJONYENILENEBILIRENERJIVEELEKTRIKLIARACSARJSISTEMLERITICARETANONIMSIRKETI",
+   "source": "https://sarjon.com.tr/fiyatlar/",
+   "note": "DC fiyatı istasyonun gücüne göre değişir.",
+   "ac": {
+    "min": 10.99,
+    "max": 10.99
+   },
+   "dc": {
+    "min": 11.99,
+    "max": 13.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "LUMİCLE",
+   "brandKey": "LUMICLE",
+   "operatorName": "LUMHOUSE ENERJİ SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "LUMHOUSEENERJISANAYIVETICARETANONIMSIRKETI",
+   "source": "https://lumicle.com.tr",
+   "note": null,
+   "ac": {
+    "min": 9.99,
+    "max": 9.99
+   },
+   "dc": {
+    "min": 13.49,
+    "max": 13.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "TORA",
+   "brandKey": "TORA",
+   "operatorName": "TORA TEKNİK HİZMETLER İŞLETME ANONİM ŞİRKETİ",
+   "operatorKey": "TORATEKNIKHIZMETLERISLETMEANONIMSIRKETI",
+   "source": "https://torasarj.com/fiyatlar/",
+   "note": null,
+   "ac": {
+    "min": 9.99,
+    "max": 9.99
+   },
+   "dc": {
+    "min": 13.49,
+    "max": 13.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "efish",
+   "brandKey": "EFISH",
+   "operatorName": "ARTAŞ ENERJİ YATIRIMLARI SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "ARTASENERJIYATIRIMLARISANAYIVETICARETANONIMSIRKETI",
+   "source": "https://www.efish.com.tr/tr/fiyatlandirma/",
+   "note": null,
+   "ac": {
+    "min": 10.99,
+    "max": 10.99
+   },
+   "dc": {
+    "min": 15.99,
+    "max": 15.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "ADZE",
+   "brandKey": "ADZE",
+   "operatorName": "ALFAMET ENERJİ VE ŞARJ TEKNOLOJİLERİ ANONİM ŞİRKETİ",
+   "operatorKey": "ALFAMETENERJIVESARJTEKNOLOJILERIANONIMSIRKETI",
+   "source": "https://www.adze.com/tr/fiyat-tarifesi",
+   "note": null,
+   "ac": {
+    "min": 9.4,
+    "max": 9.4
+   },
+   "dc": {
+    "min": 13.4,
+    "max": 13.4
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "tunçmatik",
+   "brandKey": "TUNCMATIK",
+   "operatorName": "TUNÇMATİK ŞARJ TEKNOLOJİLERİ ANONİM ŞİRKETİ",
+   "operatorKey": "TUNCMATIKSARJTEKNOLOJILERIANONIMSIRKETI",
+   "source": "https://tuncmatikcharge.com/fiyatlar/",
+   "note": null,
+   "ac": {
+    "min": 10.99,
+    "max": 10.99
+   },
+   "dc": {
+    "min": 15.49,
+    "max": 15.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "varr TM",
+   "brandKey": "VARRTM",
+   "operatorName": "DESA ENERJİ ELEKTRİK ÜRETİM ANONİM ŞİRKETİ",
+   "operatorKey": "DESAENERJIELEKTRIKURETIMANONIMSIRKETI",
+   "source": "https://www.varr.com.tr",
+   "note": null,
+   "ac": {
+    "min": 9.9,
+    "max": 9.9
+   },
+   "dc": {
+    "min": 13.9,
+    "max": 13.9
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "ZEPLİN CAR rental",
+   "brandKey": "ZEPLINCARRENTAL",
+   "operatorName": "ZEPLİN TURİZM ARAÇ KİRALAMA MOBİLİTE VE ENERJİ YATIRIMLARI ANONİM ŞİRKETİ",
+   "operatorKey": "ZEPLINTURIZMARACKIRALAMAMOBILITEVEENERJIYATIRIMLARIANONIMSIRKETI",
+   "source": "https://www.zeplinenerji.com",
+   "note": null,
+   "ac": {
+    "min": 9.5,
+    "max": 9.5
+   },
+   "dc": {
+    "min": 12.0,
+    "max": 12.0
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
   }
  ]
 }
