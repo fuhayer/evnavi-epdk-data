@@ -7,6 +7,10 @@ Kaynak: EPDK Şarj@TR (`apigateway.epdk.gov.tr/sarjIstasyonlari`). GitHub Action
 |---|---|
 | `data/stations.json` | Tüm istasyonlar (halka açık + özel), EPDK alan adlarıyla |
 | `data/meta.json` | Üretim zamanı, sürüm hash'i, istasyon sayıları |
+| `data/prices.json` | Operatör kWh fiyatları (TL, KDV dahil) — **operatörlerin kendi resmi sitelerinden** |
+
+EPDK verisinde fiyat yoktur. `scripts/fetch_prices.py` her operatörün resmi fiyat sayfasını okur; sayfa okunamazsa
+uydurma değer yazılmaz, önceki fiyat `checkedAt` tarihiyle korunur ve `stale: true` olur.
 
 ## Neden kopya?
 

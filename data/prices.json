@@ -1,0 +1,132 @@
+{
+ "v": 1,
+ "currency": "TRY",
+ "unit": "kWh",
+ "vatIncluded": true,
+ "source": "Operatörlerin resmi web siteleri",
+ "operators": [
+  {
+   "brand": "zes",
+   "brandKey": "ZES",
+   "operatorName": "ZES DİJİTAL TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "ZESDIJITALTICARETANONIMSIRKETI",
+   "source": "https://zes.net/tr/fiyatlandirma",
+   "note": "Fiyatlar lokasyona göre değişebilir.",
+   "ac": {
+    "min": 10.99,
+    "max": 10.99
+   },
+   "dc": {
+    "min": 12.99,
+    "max": 16.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "Trugo",
+   "brandKey": "TRUGO",
+   "operatorName": "TRUGO AKILLI ŞARJ ÇÖZÜMLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "TRUGOAKILLISARJCOZUMLERISANAYIVETICARETANONIMSIRKETI",
+   "source": "https://www.trugo.com.tr/price",
+   "note": "Fiyatlar lokasyona göre değişebilir.",
+   "ac": {
+    "min": 9.95,
+    "max": 9.95
+   },
+   "dc": {
+    "min": 12.0,
+    "max": 14.98
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "EN YAKIT",
+   "brandKey": "ENYAKIT",
+   "operatorName": "EN YAKIT ANONİM ŞİRKETİ",
+   "operatorKey": "ENYAKITANONIMSIRKETI",
+   "source": "https://www.enyakit.com.tr/ucretlendirme",
+   "note": "Ağın tamamı DC. Seçili istasyonlarda kampanyalı fiyat uygulanabilir.",
+   "ac": null,
+   "dc": {
+    "min": 14.9,
+    "max": 14.9
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "oncharge",
+   "brandKey": "ONCHARGE",
+   "operatorName": "KALYON ELECTRICAL VEHICLE ENERJİ YATIRIM ANONİM ŞİRKETİ",
+   "operatorKey": "KALYONELECTRICALVEHICLEENERJIYATIRIMANONIMSIRKETI",
+   "source": "https://www.oncharge.com.tr/fiyatlar",
+   "note": "Lokasyon veya soket bazlı fiyatlar değişebilir.",
+   "ac": {
+    "min": 9.99,
+    "max": 9.99
+   },
+   "dc": {
+    "min": 13.5,
+    "max": 13.5
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "Otojet",
+   "brandKey": "OTOJET",
+   "operatorName": "OTOJET ENERJİ SANAYİ VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "OTOJETENERJISANAYIVETICARETANONIMSIRKETI",
+   "source": "https://www.oto-jet.com.tr/fiyatlarimiz",
+   "note": null,
+   "ac": {
+    "min": 10.99,
+    "max": 10.99
+   },
+   "dc": {
+    "min": 15.49,
+    "max": 15.49
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "D-Charge",
+   "brandKey": "DCHARGE",
+   "operatorName": "DOĞUŞ ŞARJ SİSTEMLERİ PAZARLAMA VE TİCARET ANONİM ŞİRKETİ",
+   "operatorKey": "DOGUSSARJSISTEMLERIPAZARLAMAVETICARETANONIMSIRKETI",
+   "source": "https://dcharge.com.tr/tarifeler",
+   "note": null,
+   "ac": {
+    "min": 10.9,
+    "max": 10.9
+   },
+   "dc": {
+    "min": 14.9,
+    "max": 14.9
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  },
+  {
+   "brand": "beefull",
+   "brandKey": "BEEFULL",
+   "operatorName": "BEEFULL ENERJİ TEKNOLOJİLERİ ANONİM ŞİRKETİ",
+   "operatorKey": "BEEFULLENERJITEKNOLOJILERIANONIMSIRKETI",
+   "source": "https://beefull.com/tarifeler/elektrikli-arac-tarifesi/",
+   "note": null,
+   "ac": {
+    "min": 9.9,
+    "max": 9.9
+   },
+   "dc": {
+    "min": 13.99,
+    "max": 13.99
+   },
+   "checkedAt": "2026-10-29",
+   "stale": false
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""Şarj operatörlerinin güncel kWh fiyatlarını KENDİ RESMİ SİTELERİNDEN çeker → data/prices.json
+
+EPDK verisinde fiyat yoktur. Her operatör için resmi fiyat sayfası ve fiyatı okuyan bir desen tanımlıdır.
+Bir sayfa okunamazsa (site değişti, erişilemedi) uydurma değer üretilmez: önceki geçerli fiyat
+`checkedAt` tarihiyle korunur ve `stale: true` olarak işaretlenir.
+
+Kullanım: python3 scripts/fetch_prices.py
+"""
+
+from __future__ import annotations
+
+import html
+import json
+import re
+import sys
+import time
+import unicodedata
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Safari/605.1.15"
+NUM = r"(\d{1,2}[.,]\d{1,2})"
+
+# brand: EPDK verisindeki "marka" alanı. Desenler sayfanın düz metni üzerinde çalışır;
+# her desen 1 (tek fiyat) veya 2 (en düşük–en yüksek) sayı yakalar.
+OPERATORS = [
+    {"brand": "zes", "url": "https://zes.net/tr/fiyatlandirma",
+     "ac": rf"AC\s*{NUM}\s*₺",
+     "dc": rf"DC-2\s*{NUM}\s*₺\s*/\s*kWh\s*-\s*{NUM}\s*₺",
+     "note": "Fiyatlar lokasyona göre değişebilir."},
+    {"brand": "Trugo", "url": "https://www.trugo.com.tr/price",
+     "ac": rf"AC cihazlar için 1 kWh ücreti\s*{NUM}\s*TL",
+     "dc": rf"DC cihazlar için 1 kWh ücreti\s*{NUM}\s*TL\s*-\s*{NUM}\s*TL",
+     "note": "Fiyatlar lokasyona göre değişebilir."},
+    {"brand": "EN YAKIT", "url": "https://www.enyakit.com.tr/ucretlendirme",
+     "dc": rf"{NUM}\s*TL/kWh fiyatla",
+     "note": "Ağın tamamı DC. Seçili istasyonlarda kampanyalı fiyat uygulanabilir."},
+    {"brand": "oncharge", "url": "https://www.oncharge.com.tr/fiyatlar",
+     "ac": rf"AC Soket Tarifesi\s*{NUM}\s*TL",
+     "dc": rf"DC Soket Tarifesi\s*{NUM}\s*TL",
+     "note": "Lokasyon veya soket bazlı fiyatlar değişebilir."},
+    {"brand": "Otojet", "url": "https://www.oto-jet.com.tr/fiyatlarimiz",
+     "ac": rf"AC Tarife\s*₺\s*{NUM}",
+     "dc": rf"DC Tarife\s*₺\s*{NUM}"},
+    {"brand": "D-Charge", "url": "https://dcharge.com.tr/tarifeler",
+     "ac": rf"Tüm AC Soketler\s*{NUM}\s*TL",
+     "dc": rf"Tüm DC Soketler\s*{NUM}\s*TL"},
+    {"brand": "beefull", "url": "https://beefull.com/tarifeler/elektrikli-arac-tarifesi/",
+     "ac": rf"AC SOKET TARİFESİ\s*Fiyat\s*/\s*Birim\s*{NUM}\s*TL",
+     "dc": rf"DC SOKET TARİFESİ\s*Fiyat\s*/\s*Birim\s*{NUM}\s*TL"},
+]
+
+
+def norm(s: str) -> str:
+    s = (s or "").replace("İ", "I").replace("ı", "i").upper()
+    s = unicodedata.normalize("NFKD", s)
+    return re.sub(r"[^A-Z0-9]", "", "".join(c for c in s if not unicodedata.combining(c)))
+
+
+def page_text(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "tr"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        body = r.read().decode("utf-8", "ignore")
+    body = re.sub(r"(?s)<(script|style).*?</\1>|<[^>]+>", " ", body)
+    return re.sub(r"\s+", " ", html.unescape(body))
+
+
+def parse_range(pattern: str | None, text: str) -> dict | None:
+    if not pattern:
+        return None
+    m = re.search(pattern, text, re.IGNORECASE)
+    if not m:
+        raise ValueError(f"desen bulunamadı: {pattern}")
+    values = sorted(float(v.replace(",", ".")) for v in m.groups() if v)
+    if not values or not all(3 <= v <= 40 for v in values):  # TL/kWh için makul aralık
+        raise ValueError(f"beklenmeyen değer: {values}")
+    return {"min": values[0], "max": values[-1]}
+
+
+def operator_names() -> dict[str, str]:
+    """EPDK verisinden marka → işletmeci ünvanı (fiyatı istasyonlara bağlamak için)."""
+    rows = json.loads((DATA_DIR / "stations.json").read_text(encoding="utf-8"))["data"]
+    counts: dict[str, dict[str, int]] = {}
+    for r in rows:
+        by_op = counts.setdefault(norm(r.get("marka")), {})
+        op = r.get("sarjAgiIsletmecisiUnvan") or ""
+        by_op[op] = by_op.get(op, 0) + 1
+    return {brand: max(ops, key=ops.get) for brand, ops in counts.items()}
+
+
+def main() -> int:
+    path = DATA_DIR / "prices.json"
+    previous = {}
+    if path.exists():
+        previous = {p["brandKey"]: p for p in json.loads(path.read_text(encoding="utf-8")).get("operators", [])}
+    names = operator_names()
+    today = datetime.now(timezone.utc).date().isoformat()
+    result, failures = [], 0
+
+    for op in OPERATORS:
+        key = norm(op["brand"])
+        entry = {"brand": op["brand"], "brandKey": key, "operatorName": names.get(key),
+                 "operatorKey": norm(names.get(key, "")), "source": op["url"], "note": op.get("note")}
+        try:
+            text = page_text(op["url"])
+            entry.update(ac=parse_range(op.get("ac"), text), dc=parse_range(op.get("dc"), text),
+                         checkedAt=today, stale=False)
+            print(f"✓ {op['brand']}: AC {entry['ac']} DC {entry['dc']}")
+        except Exception as error:  # noqa: BLE001
+            failures += 1
+            old = previous.get(key)
+            if old:
+                entry.update(ac=old.get("ac"), dc=old.get("dc"), checkedAt=old.get("checkedAt"), stale=True)
+            print(f"::warning::{op['brand']} fiyatı okunamadı ({error}); "
+                  + ("önceki değer korunuyor." if old else "fiyat yok."))
+            if not old:
+                continue
+        result.append(entry)
+        time.sleep(1)
+
+    payload = {"v": 1, "currency": "TRY", "unit": "kWh", "vatIncluded": True,
+               "source": "Operatörlerin resmi web siteleri", "operators": result}
+    new_json = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
+    if path.exists() and path.read_text(encoding="utf-8") == new_json:
+        print("Fiyatlarda değişiklik yok.")
+    else:
+        path.write_text(new_json, encoding="utf-8")
+        print(f"Yazıldı: {len(result)} operatör ({failures} okunamadı).")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
