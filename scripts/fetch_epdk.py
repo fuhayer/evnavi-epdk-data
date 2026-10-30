@@ -76,7 +76,8 @@ def transform(raw: bytes) -> list[dict]:
 
 
 def write_outputs(stations: list[dict]) -> bool:
-    """Veri değiştiyse dosyaları yazar; değiştiyse True döner."""
+    """Veri değiştiyse dosyaları yazar; değiştiyse True döner. Değişmese de meta.json'daki `checkedAt`
+    (EPDK'nın en son kontrol edildiği an) güncellenir; uygulama "ne zaman kontrol edildi" bilgisini buradan gösterir."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     stations_path = DATA_DIR / "stations.json"
     meta_path = DATA_DIR / "meta.json"
@@ -84,11 +85,16 @@ def write_outputs(stations: list[dict]) -> bool:
     data_json = json.dumps(stations, ensure_ascii=False, separators=(",", ":"))
     version = hashlib.sha256(data_json.encode()).hexdigest()[:12]
 
-    if meta_path.exists() and json.loads(meta_path.read_text()).get("version") == version:
-        print(f"Değişiklik yok ({len(stations)} istasyon, sürüm {version}).")
-        return False
+    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    if meta_path.exists():
+        meta = json.loads(meta_path.read_text())
+        if meta.get("version") == version:
+            meta["checkedAt"] = now
+            meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"Değişiklik yok ({len(stations)} istasyon, sürüm {version}); kontrol zamanı güncellendi.")
+            return False
 
-    generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    generated_at = now
     public_count = sum(1 for s in stations if s.get("hizmetSekli") == "HALKA_ACIK")
     stations_path.write_text(
         '{"v":1,"source":"EPDK","generatedAt":"%s","version":"%s","data":%s}\n'
@@ -99,6 +105,7 @@ def write_outputs(stations: list[dict]) -> bool:
         "v": 1,
         "source": "EPDK Şarj@TR (apigateway.epdk.gov.tr/sarjIstasyonlari)",
         "generatedAt": generated_at,
+        "checkedAt": generated_at,
         "version": version,
         "stationCount": len(stations),
         "publicStationCount": public_count,

@@ -38,7 +38,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add data/kgm_tolls.json
           git commit -m "KGM ücret güncellemesi: $(jq '.tariffs | length' data/kgm_tolls.json) tarife ($(date -u +%Y-%m-%d))"
+          git pull --rebase
           git push

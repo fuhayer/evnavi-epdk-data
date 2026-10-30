@@ -2,8 +2,11 @@ name: EPDK istasyonlarını güncelle
 
 on:
   schedule:
-    # Her gün 03:30 UTC (06:30 TSİ). EPDK kotası nedeniyle günde bir kez.
-    - cron: "30 3 * * *"
+    # Günde iki kez: 06:17 ve 18:17 TSİ. GitHub zamanlanmış görevleri yoğunlukta geciktirip atlayabildiği için iki
+    # deneme; tam saat başları en yoğun anlar olduğundan dakika 17 seçildi. Her çalışma farklı bir GitHub sunucusundan
+    # (farklı IP) gittiği için EPDK'nın IP başına günlük kotasına takılmaz.
+    - cron: "17 3 * * *"
+    - cron: "17 15 * * *"
   workflow_dispatch:
 
 permissions:
@@ -40,4 +43,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
           git commit -m "Veri güncellemesi: $(jq -r '.stationCount' data/meta.json) istasyon, $(jq '.operators | length' data/prices.json) operatör fiyatı ($(date -u +%Y-%m-%d))"
+          git pull --rebase
           git push
