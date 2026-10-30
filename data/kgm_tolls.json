@@ -92,7 +92,7 @@
     "MECİDİYE",
     "KURTKÖY",
     "ORHANLI",
-    "Ş.PINAR",
+    "ŞEKERPINAR",
     "GEBZE",
     "MUALLİMKÖY",
     "LİMAN",
@@ -2222,7 +2222,7 @@
     "ESENYURT",
     "HADIMKÖY",
     "ÇATALCA",
-    "K.BURGAZ",
+    "KUMBURGAZ",
     "SELİMPAŞA",
     "SİLİVRİ",
     "KINALI",
@@ -4068,6 +4068,102 @@
   },
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana (Batı)",
+   "lat": 37.039011,
+   "lon": 35.167689,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.038438,
+   "lon": 35.172091,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.040848,
+   "lon": 35.170732,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.039966,
+   "lon": 35.1605,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.038185,
+   "lon": 35.171622,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.035325,
+   "lon": 35.17069,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.03409,
+   "lon": 35.181834,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.038622,
+   "lon": 35.171146,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.038599,
+   "lon": 35.168395,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.037128,
+   "lon": 35.171263,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.037361,
+   "lon": 35.172486,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Adana Batı",
+   "lat": 37.037207,
+   "lon": 35.174842,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Eminlik",
    "lat": 37.647763,
    "lon": 34.655882,
@@ -4075,10 +4171,65 @@
   },
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.122736,
+   "lon": 34.715611,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.129065,
+   "lon": 34.72259,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.155256,
+   "lon": 34.785119,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.15663,
+   "lon": 34.791641,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.159808,
+   "lon": 34.791448,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Gölcük",
+   "lat": 38.124953,
+   "lon": 34.715817,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Kemerhisar",
    "lat": 37.779489,
    "lon": 34.60526,
    "station": 3
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Mersin Doğu",
+   "lat": 36.885158,
+   "lon": 34.634061,
+   "station": 14
   },
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
@@ -4110,6 +4261,13 @@
   },
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
+   "name": "Tarsus Batı",
+   "lat": 36.938982,
+   "lon": 34.856152,
+   "station": 12
+  },
+  {
+   "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Tekir",
    "lat": 37.327302,
    "lon": 34.792609,
@@ -4138,10 +4296,73 @@
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Avcılar",
+   "lat": 41.053374,
+   "lon": 28.674622,
+   "station": 2
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
    "name": "Babaeski",
    "lat": 41.501102,
    "lon": 27.117183,
    "station": 15
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Batı",
+   "lat": 41.686267,
+   "lon": 26.471961,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.661913,
+   "lon": 26.61826,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.660954,
+   "lon": 26.620975,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.630328,
+   "lon": 26.61873,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.631606,
+   "lon": 26.616742,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.634772,
+   "lon": 26.618084,
+   "station": 17,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Edirne Doğu",
+   "lat": 41.656595,
+   "lon": 26.625583,
+   "station": 17,
+   "junction": true
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
@@ -4152,10 +4373,89 @@
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Hadımköy",
+   "lat": 41.086135,
+   "lon": 28.632437,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Hadımköy",
+   "lat": 41.083322,
+   "lon": 28.63918,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Hadımköy",
+   "lat": 41.090048,
+   "lon": 28.632368,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
    "name": "Havsa",
    "lat": 41.614423,
    "lon": 26.846057,
    "station": 16
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Ispartakule",
+   "lat": 41.054912,
+   "lon": 28.716932,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Ispartakule",
+   "lat": 41.058204,
+   "lon": 28.706426,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "K. M. O. Hadımköy",
+   "lat": 41.139912,
+   "lon": 28.62691,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "K. M. O. Hadımköy",
+   "lat": 41.143802,
+   "lon": 28.620828,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "K. M. O. Hadımköy",
+   "lat": 41.143899,
+   "lon": 28.622824,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "K. M. O. Hadımköy",
+   "lat": 41.147775,
+   "lon": 28.620682,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Kumburgaz",
+   "lat": 41.0476,
+   "lon": 28.469467,
+   "station": 6
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
@@ -4166,10 +4466,153 @@
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Kınalı",
+   "lat": 41.127048,
+   "lon": 28.210531,
+   "station": 9
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
    "name": "Lüleburgaz",
    "lat": 41.445005,
    "lon": 27.388537,
    "station": 14
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.058048,
+   "lon": 28.810796,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.062005,
+   "lon": 28.811567,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.061236,
+   "lon": 28.811772,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.065144,
+   "lon": 28.810756,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.062501,
+   "lon": 28.818344,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.064187,
+   "lon": 28.80974,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.061304,
+   "lon": 28.81033,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.063284,
+   "lon": 28.812192,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.067174,
+   "lon": 28.814293,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.0616,
+   "lon": 28.804912,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.06173,
+   "lon": 28.811725,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Batı",
+   "lat": 41.062713,
+   "lon": 28.819205,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Doğu",
+   "lat": 41.061425,
+   "lon": 28.844568,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Doğu",
+   "lat": 41.063635,
+   "lon": 28.836082,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Doğu",
+   "lat": 41.062931,
+   "lon": 28.820974,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Doğu",
+   "lat": 41.063345,
+   "lon": 28.836536,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Mahmutbey Doğu",
+   "lat": 41.063707,
+   "lon": 28.82572,
+   "station": 0,
+   "junction": true
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
@@ -4184,6 +4627,27 @@
    "lat": 41.061487,
    "lon": 28.376306,
    "station": 7
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Silivri",
+   "lat": 41.13476,
+   "lon": 28.290319,
+   "station": 8
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Silivri",
+   "lat": 41.107541,
+   "lon": 28.260087,
+   "station": 8
+  },
+  {
+   "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
+   "name": "Çatalca",
+   "lat": 41.087134,
+   "lon": 28.513126,
+   "station": 5
   },
   {
    "tariff": "11-AvrupaOtoyoluMahmutbey-Edirne",
@@ -4251,6 +4715,13 @@
    "lat": 40.19294,
    "lon": 28.351783,
    "station": 3
+  },
+  {
+   "tariff": "12-Gebze-Orhangazi-Izmir",
+   "name": "Karacabey",
+   "lat": 40.19294,
+   "lon": 28.351783,
+   "station": 2
   },
   {
    "tariff": "12-Gebze-Orhangazi-Izmir",
@@ -4415,6 +4886,13 @@
    "lat": 41.234853,
    "lon": 29.028124,
    "station": 4
+  },
+  {
+   "tariff": "14-KMOAvrupaKinali-Odayeri",
+   "name": "Kınalı",
+   "lat": 41.111359,
+   "lon": 28.166637,
+   "station": 0
   },
   {
    "tariff": "14-KMOAvrupaKinali-Odayeri",
@@ -4586,6 +5064,38 @@
   },
   {
    "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Menemen",
+   "lat": 38.683045,
+   "lon": 27.005557,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Menemen",
+   "lat": 38.59921,
+   "lon": 27.091929,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Menemen",
+   "lat": 38.605572,
+   "lon": 27.092691,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Menemen",
+   "lat": 38.60878,
+   "lon": 27.096759,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
    "name": "Yeni Foça",
    "lat": 38.721917,
    "lon": 26.993796,
@@ -4597,6 +5107,38 @@
    "lat": 38.888152,
    "lon": 27.078965,
    "station": 5
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Çandarlı",
+   "lat": 38.960659,
+   "lon": 27.017376,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Çandarlı",
+   "lat": 38.961148,
+   "lon": 27.017731,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Çandarlı",
+   "lat": 38.958529,
+   "lon": 27.012098,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "16-Menemen-Aliaga-Candarli",
+   "name": "Çandarlı Tatil Köyü",
+   "lat": 38.948937,
+   "lon": 27.011682,
+   "station": 6,
+   "junction": true
   },
   {
    "tariff": "17-Ankara-Nigde",
@@ -4726,6 +5268,13 @@
   },
   {
    "tariff": "19-Aydin-Denizli",
+   "name": "Aydın Doğu",
+   "lat": 37.809446,
+   "lon": 27.878451,
+   "station": 0
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
    "name": "Buharkent",
    "lat": 37.951616,
    "lon": 28.720537,
@@ -4747,6 +5296,13 @@
   },
   {
    "tariff": "19-Aydin-Denizli",
+   "name": "Kumkısık",
+   "lat": 37.866169,
+   "lon": 29.007164,
+   "station": 7
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
    "name": "Kuyucak",
    "lat": 37.882094,
    "lon": 28.501398,
@@ -4758,6 +5314,20 @@
    "lat": 37.801388,
    "lon": 28.057096,
    "station": 1
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Nazilli",
+   "lat": 37.834712,
+   "lon": 28.324264,
+   "station": 3
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Nazilli",
+   "lat": 37.83468,
+   "lon": 28.324059,
+   "station": 3
   },
   {
    "tariff": "19-Aydin-Denizli",
@@ -4774,6 +5344,54 @@
    "station": 6
   },
   {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.820327,
+   "lon": 28.20832,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.828037,
+   "lon": 28.217406,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.825972,
+   "lon": 28.209632,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.845097,
+   "lon": 28.194138,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.843539,
+   "lon": 28.18571,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "19-Aydin-Denizli",
+   "name": "Yenipazar",
+   "lat": 37.856129,
+   "lon": 28.193399,
+   "station": 2,
+   "junction": true
+  },
+  {
    "tariff": "2-Osmangazi",
    "name": "Osmangazi Köprüsü",
    "lat": 40.756,
@@ -4781,10 +5399,161 @@
   },
   {
    "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.575691,
+   "lon": 34.26335,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.582165,
+   "lon": 34.248321,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.576065,
+   "lon": 34.242755,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.57004,
+   "lon": 34.257367,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.577443,
+   "lon": 34.250742,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Batı",
+   "lat": 36.575369,
+   "lon": 34.25833,
+   "station": 3,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Erdemli Doğu",
+   "lat": 36.646855,
+   "lon": 34.328684,
+   "station": 1
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
    "name": "Güzeloluk",
    "lat": 36.61467,
    "lon": 34.283117,
    "station": 2
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.554897,
+   "lon": 34.221374,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.546527,
+   "lon": 34.219044,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.545915,
+   "lon": 34.213713,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.535727,
+   "lon": 34.222499,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.535279,
+   "lon": 34.22701,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kumkuyu",
+   "lat": 36.53119,
+   "lon": 34.221398,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.449497,
+   "lon": 34.117516,
+   "station": 5,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.45383,
+   "lon": 34.125527,
+   "station": 5,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.463765,
+   "lon": 34.123769,
+   "station": 5,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.455927,
+   "lon": 34.121792,
+   "station": 5,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.464224,
+   "lon": 34.119124,
+   "station": 5,
+   "junction": true
+  },
+  {
+   "tariff": "20-Cesmeli-KizkalesiTR",
+   "name": "Kızkalesi",
+   "lat": 36.462097,
+   "lon": 34.115953,
+   "station": 5,
+   "junction": true
   },
   {
    "tariff": "20-Cesmeli-KizkalesiTR",
@@ -4863,6 +5632,13 @@
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Düzce",
+   "lat": 40.804027,
+   "lon": 31.167564,
+   "station": 23
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
    "name": "Gebze",
    "lat": 40.804308,
    "lon": 29.474154,
@@ -4891,6 +5667,13 @@
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Hereke Doğu",
+   "lat": 40.78638,
+   "lon": 29.621435,
+   "station": 11
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
    "name": "Kandıra",
    "lat": 40.77824,
    "lon": 29.973348,
@@ -4912,6 +5695,77 @@
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.93627,
+   "lon": 29.332273,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.937888,
+   "lon": 29.329058,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.930195,
+   "lon": 29.328423,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.930505,
+   "lon": 29.3292,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.928359,
+   "lon": 29.32736,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.929722,
+   "lon": 29.326252,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.932207,
+   "lon": 29.332465,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Kurtköy",
+   "lat": 40.931606,
+   "lon": 29.329329,
+   "station": 4,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Körfez Gişeler",
+   "lat": 40.770464,
+   "lon": 29.769138,
+   "station": 12
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
    "name": "Kızılcahamam",
    "lat": 40.332248,
    "lon": 32.497311,
@@ -4926,10 +5780,193 @@
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Mecidiye",
+   "lat": 40.954018,
+   "lon": 29.315526,
+   "station": 3
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.790078,
+   "lon": 29.514223,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.793248,
+   "lon": 29.512097,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.791189,
+   "lon": 29.516717,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.80198,
+   "lon": 29.500329,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.793565,
+   "lon": 29.515556,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.799099,
+   "lon": 29.515082,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Muallimköy",
+   "lat": 40.801394,
+   "lon": 29.501602,
+   "station": 8,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
    "name": "Orhanlı",
    "lat": 40.926728,
    "lon": 29.343956,
    "station": 5
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.982491,
+   "lon": 29.208032,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.983648,
+   "lon": 29.201714,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.979582,
+   "lon": 29.207144,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.972218,
+   "lon": 29.215354,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.968945,
+   "lon": 29.217959,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.968529,
+   "lon": 29.217474,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.971197,
+   "lon": 29.219765,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.968888,
+   "lon": 29.217127,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.971121,
+   "lon": 29.215993,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.969406,
+   "lon": 29.217581,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.967459,
+   "lon": 29.216263,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.968369,
+   "lon": 29.215167,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.966782,
+   "lon": 29.218873,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra",
+   "lat": 40.964027,
+   "lon": 29.219986,
+   "station": 1,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Samandıra Sapağı",
+   "lat": 40.968125,
+   "lon": 29.21633,
+   "station": 1,
+   "junction": true
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
@@ -4940,10 +5977,41 @@
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Sultanbeyli",
+   "lat": 40.984348,
+   "lon": 29.232798,
+   "station": 2
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
    "name": "Yeniçağa",
    "lat": 40.768337,
    "lon": 32.008662,
    "station": 28
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Çamlıca",
+   "lat": 41.003805,
+   "lon": 29.059604,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Çamlıca",
+   "lat": 41.006493,
+   "lon": 29.066297,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Çamlıca",
+   "lat": 41.014557,
+   "lon": 29.057053,
+   "station": 0,
+   "junction": true
   },
   {
    "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
@@ -4960,6 +6028,102 @@
    "station": 32
   },
   {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.865166,
+   "lon": 29.38603,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.861419,
+   "lon": 29.3811,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.863107,
+   "lon": 29.383735,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.863244,
+   "lon": 29.383523,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.863546,
+   "lon": 29.383234,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.863321,
+   "lon": 29.383357,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.864392,
+   "lon": 29.381045,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.861961,
+   "lon": 29.386611,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.862398,
+   "lon": 29.385894,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.866614,
+   "lon": 29.398814,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.872593,
+   "lon": 29.393574,
+   "station": 6,
+   "junction": true
+  },
+  {
+   "tariff": "5-AnadoluOtoyoluCamlica-Akinci",
+   "name": "Şekerpınar",
+   "lat": 40.868599,
+   "lon": 29.392113,
+   "station": 6,
+   "junction": true
+  },
+  {
    "tariff": "6-Izmir-Cesme",
    "name": "Alaçatı",
    "lat": 38.281205,
@@ -4972,6 +6136,22 @@
    "lat": 38.302977,
    "lon": 26.686058,
    "station": 2
+  },
+  {
+   "tariff": "6-Izmir-Cesme",
+   "name": "Seferihisar",
+   "lat": 38.369903,
+   "lon": 26.874388,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "6-Izmir-Cesme",
+   "name": "Seferihisar",
+   "lat": 38.36518,
+   "lon": 26.866256,
+   "station": 0,
+   "junction": true
   },
   {
    "tariff": "6-Izmir-Cesme",
@@ -5016,11 +6196,74 @@
    "station": 1
   },
   {
+   "tariff": "7-Izmir-Aydin",
+   "name": "Torbalı",
+   "lat": 38.177258,
+   "lon": 27.312374,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "7-Izmir-Aydin",
+   "name": "Torbalı",
+   "lat": 38.194395,
+   "lon": 27.345285,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "7-Izmir-Aydin",
+   "name": "Torbalı",
+   "lat": 38.172019,
+   "lon": 27.314132,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "7-Izmir-Aydin",
+   "name": "Torbalı",
+   "lat": 38.201435,
+   "lon": 27.340523,
+   "station": 2,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Adana Doğu",
+   "lat": 37.02832,
+   "lon": 35.414889,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Adana Doğu",
+   "lat": 37.026277,
+   "lon": 35.417563,
+   "station": 0,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Adana Doğu",
+   "lat": 37.027934,
+   "lon": 35.426597,
+   "station": 0,
+   "junction": true
+  },
+  {
    "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
    "name": "Bahçe",
    "lat": 37.182259,
    "lon": 36.51324,
    "station": 13
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Ceyhan Yumurtalık",
+   "lat": 36.987225,
+   "lon": 35.832886,
+   "station": 1
   },
   {
    "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
@@ -5035,6 +6278,34 @@
    "lat": 37.198684,
    "lon": 36.425623,
    "station": 12
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Erzin",
+   "lat": 36.96157,
+   "lon": 36.139881,
+   "station": 6
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Erzin",
+   "lat": 36.961544,
+   "lon": 36.139753,
+   "station": 6
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Gaziantep Batı",
+   "lat": 37.202863,
+   "lon": 37.266072,
+   "station": 16
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Gaziantep Batı",
+   "lat": 37.202966,
+   "lon": 37.265972,
+   "station": 16
   },
   {
    "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
@@ -5056,6 +6327,127 @@
    "lat": 37.102491,
    "lon": 36.246585,
    "station": 4
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Osmaniye",
+   "lat": 37.102491,
+   "lon": 36.246585,
+   "station": 5
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Payas",
+   "lat": 36.742738,
+   "lon": 36.221797,
+   "station": 9
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Payas",
+   "lat": 36.742602,
+   "lon": 36.22173,
+   "station": 9
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Toprakkale",
+   "lat": 37.078422,
+   "lon": 36.118385,
+   "station": 2
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "Toprakkale",
+   "lat": 37.078459,
+   "lon": 36.118283,
+   "station": 2
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.607789,
+   "lon": 36.204329,
+   "station": 11
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.607567,
+   "lon": 36.204316,
+   "station": 11
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.612159,
+   "lon": 36.201653,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.609935,
+   "lon": 36.210914,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.60683,
+   "lon": 36.209347,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun",
+   "lat": 36.605553,
+   "lon": 36.199511,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun OSB",
+   "lat": 36.706979,
+   "lon": 36.219077,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun OSB",
+   "lat": 36.696112,
+   "lon": 36.215283,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun OSB",
+   "lat": 36.701141,
+   "lon": 36.215574,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun OSB",
+   "lat": 36.703297,
+   "lon": 36.212172,
+   "station": 10,
+   "junction": true
+  },
+  {
+   "tariff": "8-CukurovaOtoyoluAdana-Gaziantep",
+   "name": "İskenderun OSB",
+   "lat": 36.698094,
+   "lon": 36.214448,
+   "station": 10,
+   "junction": true
   },
   {
    "tariff": "9-CukurovaOtoyoluGaziantep-Sanliurfa",

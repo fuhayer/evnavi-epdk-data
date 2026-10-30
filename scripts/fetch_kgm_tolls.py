@@ -15,6 +15,7 @@ import io
 import itertools
 import os
 import json
+import math
 import re
 import subprocess
 import sys
@@ -112,7 +113,7 @@ STATION_FIXES = {
     "19-Aydin-Denizli": ["AYDIN ALIN", "KÖŞK", "YENİ PAZAR", "NAZİLLİ", "KUYUCAK", "BUHARKENT", "SARAYKÖY",
                          "KUMKISIK-A", "KUMKISIK-B", "PAMUKKALE", "KOCABAŞ"],
 }
-NAME_FIXES = {"DÜZCES OARNG.ANİZE": "DÜZCE ORGANİZE"}
+NAME_FIXES = {"DÜZCES OARNG.ANİZE": "DÜZCE ORGANİZE", "K.BURGAZ": "KUMBURGAZ", "Ş.PINAR": "ŞEKERPINAR"}
 LABELS = {"ARAÇ SINIFI", "İSTASYON", "SINIF", "ÇIKIŞ GİŞELERİ", "GİRİŞ / ÇIKIŞ", "İstasyon", "Sınıf", "Giriş / Çıkış"}
 
 
@@ -264,14 +265,23 @@ def aliases(station):
     return {norm(n) for n in names if norm(n)}
 
 
-def station_match(key, stations, exact):
+def words(text):
+    return {norm(w) for w in re.split(r"[\s\-/()]+", clean(text)) if norm(w)}
+
+
+def station_match(key, stations, exact, loose_words=None):
     """Gişe adının eşleştiği istasyon indeksi. Birebir değilse yalnız gişe adı istasyon adının başıysa
-    ("Kulu" -> "Kulu-Kırıkkale") kabul edilir; tersine ("Gebze OSB" -> "GEBZE") başka gişe olabileceği için edilmez."""
+    ("Kulu" -> "Kulu-Kırıkkale") kabul edilir; tersine ("Gebze OSB" -> "GEBZE") başka gişe olabileceği için edilmez.
+    `loose_words` verilirse (yalnız yeri bilinmeyen istasyonlar için) istasyonun tüm kelimeleri gişe adında geçmesi
+    yeter, sıra önemsiz: "DOĞU HEREKE" -> "Hereke Doğu", "CEYHAN" -> "Ceyhan Yumurtalık"."""
     hits = []
     for i, station in enumerate(stations):
         for alias in aliases(station):
             if alias == key or (not exact and len(key) >= 4 and alias.startswith(key)):
                 hits.append((len(alias), i))
+        base = re.sub(r"\s+(ALIN|Alın|G-\d+)$", "", clean(station))
+        if loose_words and words(base) and words(base) <= loose_words:
+            hits.append((len(norm(base)), i))
     return max(hits)[1] if hits else None
 
 
@@ -305,7 +315,7 @@ def main():
         if not name or not re.search(r"[a-zçğıöşü]", name, re.I) or re.search(r"[α-ω]", name, re.I):
             continue
         booths.setdefault(name, []).append(center(e))
-    points = []
+    points, groups_by_place = [], []
     for name, coords in booths.items():
         groups = []
         for lat, lon in coords:
@@ -322,6 +332,7 @@ def main():
                    or [t["id"] for t in motorways if key in texts[t["id"]]])
         for g in groups:
             lat, lon = sum(c[0] for c in g) / len(g), sum(c[1] for c in g) / len(g)
+            groups_by_place.append(((lat, lon), short))
             points.append({"name": short, "lat": round(lat, 6), "lon": round(lon, 6), "candidates": matches})
 
     # Birden çok otoyolda geçen adlar, tek eşleşen gişelerin ağırlık merkezine en yakın otoyola verilir.
@@ -346,6 +357,52 @@ def main():
         if index is None:
             index = station_match(key, tariff["stations"], exact=False)
         result.append({"tariff": tid, **p, **({"station": index} if index is not None else {})})
+
+    def km(a, b):
+        return math.hypot((a[0] - b[0]) * 111.0, (a[1] - b[1]) * 111.0 * math.cos(math.radians(a[0])))
+
+    def fill(candidates):
+        """Yeri bilinmeyen istasyonları aday noktalarla (konum, ad, kavşak mı) doldurur."""
+        for tariff in (t for t in tariffs if t["kind"] == "motorway"):
+            known = [(p["lat"], p["lon"]) for p in result if p["tariff"] == tariff["id"]]
+            have = {p.get("station") for p in result if p["tariff"] == tariff["id"]}
+            missing = {i: n for i, n in enumerate(tariff["stations"]) if i not in have}
+            if not known or not missing:
+                continue
+            names = list(missing.values())
+            for spot, name, junction in candidates:
+                if min(km(spot, k) for k in known) > 40:
+                    continue
+                key = norm(name)
+                index = station_match(key, names, exact=True)
+                if index is None:
+                    index = station_match(key, names, exact=False, loose_words=words(name))
+                if index is None:
+                    continue
+                result.append({"tariff": tariff["id"], "name": name, "lat": round(spot[0], 6), "lon": round(spot[1], 6),
+                               "station": list(missing.keys())[index], **({"junction": True} if junction else {})})
+
+    # Adı KGM'den farklı yazılmış gişeler ("Hereke Doğu" / "DOĞU HEREKE").
+    fill([(spot, name, False) for spot, name in groups_by_place])
+
+    # Adsız gişeler: OSM'de adı yazılmamış gişeye en yakın (1,5 km) otoyol kavşağının adı verilir. Yalnız tarifede
+    # yeri henüz bilinmeyen bir istasyonla eşleşen ve aynı otoyolun bilinen bir gişesine 40 km'den yakın olanlar
+    # alınır (otogar, otopark gişeleri böylece elenir).
+    els = overpass('[out:json][timeout:180];(nwr["barrier"="toll_booth"][!"name"](35.8,25.6,42.2,44.9);'
+                   'node["highway"="motorway_junction"]["name"](35.8,25.6,42.2,44.9););out center tags;')
+    unnamed = [center(e) for e in els if e.get("tags", {}).get("barrier") == "toll_booth"]
+    junctions = [(center(e), re.sub(r"\s+\d+$", "", clean(e["tags"]["name"])))
+                 for e in els if e.get("tags", {}).get("highway") == "motorway_junction"]
+    named_unnamed = []
+    for booth in unnamed:
+        spot, jname = min(junctions, key=lambda j: km(booth, j[0]))
+        if km(booth, spot) <= 1.5:
+            named_unnamed.append((booth, jname, False))
+    fill(named_unnamed)
+
+    # Hâlâ yeri bilinmeyen istasyonlar için aynı adlı otoyol kavşağının kendisi (çıkış/giriş ayrım noktası) kullanılır.
+    # Kavşak ana yol üzerinde olduğundan uygulama bunlar için daha dar bir yakınlık eşiği uygular ("junction").
+    fill([(spot, name, True) for spot, name in junctions])
 
     # Köprüler: köprü yapısının (way) merkezi.
     names = [b for bs in BRIDGES.values() for b in bs]
