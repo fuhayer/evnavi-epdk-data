@@ -8,6 +8,13 @@ on:
     - cron: "17 3 * * *"
     - cron: "17 15 * * *"
   workflow_dispatch:
+  # Güncelleme kodu değişince bir kez hemen çalışsın.
+  push:
+    branches: [main]
+    paths:
+      - scripts/fetch_epdk.py
+      - scripts/fetch_prices.py
+      - .github/workflows/update.yml
 
 permissions:
   contents: write

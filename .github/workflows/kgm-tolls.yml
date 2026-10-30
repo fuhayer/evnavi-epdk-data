@@ -5,6 +5,12 @@ on:
     # Her pazartesi 04:00 UTC (07:00 TSİ). KGM tarifeleri genelde Ocak ve Temmuz'da değişir.
     - cron: "0 4 * * 1"
   workflow_dispatch:
+  # Güncelleme kodu değişince bir kez hemen çalışsın.
+  push:
+    branches: [main]
+    paths:
+      - scripts/fetch_kgm_tolls.py
+      - .github/workflows/kgm-tolls.yml
 
 permissions:
   contents: write
