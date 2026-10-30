@@ -1,0 +1,44 @@
+name: KGM geçiş ücretlerini güncelle
+
+on:
+  schedule:
+    # Her pazartesi 04:00 UTC (07:00 TSİ). KGM tarifeleri genelde Ocak ve Temmuz'da değişir.
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: epdk-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: pdfplumber kur
+        run: pip install pdfplumber
+
+      - name: KGM tarifeleri ve OpenStreetMap gişe konumları
+        run: python3 scripts/fetch_kgm_tolls.py data/kgm_tolls.json
+
+      - name: Değiştiyse commit et
+        run: |
+          if git diff --quiet -- data/kgm_tolls.json; then
+            echo "Ücretler değişmedi."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+          git add data/kgm_tolls.json
+          git commit -m "KGM ücret güncellemesi: $(jq '.tariffs | length' data/kgm_tolls.json) tarife ($(date -u +%Y-%m-%d))"
+          git push
