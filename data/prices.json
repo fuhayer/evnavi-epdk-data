@@ -136,12 +136,12 @@
    "source": "https://ovolt.com.tr/tarifeler",
    "note": "Seçili lokasyonlarda kampanyalı fiyat uygulanabilir.",
    "ac": {
-    "min": 9.99,
-    "max": 9.99
+    "min": 8.99,
+    "max": 8.99
    },
    "dc": {
     "min": 10.49,
-    "max": 14.49
+    "max": 13.49
    },
    "checkedAt": "2026-11-02",
    "stale": false
