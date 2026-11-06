@@ -198,7 +198,7 @@
     "max": 13.99
    },
    "checkedAt": "2026-11-06",
-   "stale": false
+   "stale": true
   },
   {
    "brand": "MİGGO",
@@ -287,8 +287,8 @@
     "min": 11.99,
     "max": 13.99
    },
-   "checkedAt": "2026-11-05",
-   "stale": true
+   "checkedAt": "2026-11-06",
+   "stale": false
   },
   {
    "brand": "LUMİCLE",
@@ -305,8 +305,8 @@
     "min": 13.49,
     "max": 13.49
    },
-   "checkedAt": "2026-11-05",
-   "stale": true
+   "checkedAt": "2026-11-06",
+   "stale": false
   },
   {
    "brand": "TORA",
