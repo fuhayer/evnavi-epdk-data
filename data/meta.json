@@ -1,9 +1,9 @@
 {
   "v": 1,
   "source": "EPDK Şarj@TR (apigateway.epdk.gov.tr/sarjIstasyonlari)",
-  "generatedAt": "2026-11-12T10:59:37+00:00",
-  "checkedAt": "2026-11-12T10:59:37+00:00",
-  "version": "ed9577fe2380",
-  "stationCount": 17185,
-  "publicStationCount": 13254
+  "generatedAt": "2026-11-12T21:51:23+00:00",
+  "checkedAt": "2026-11-12T21:51:23+00:00",
+  "version": "dd018344bdcf",
+  "stationCount": 17188,
+  "publicStationCount": 13257
 }
