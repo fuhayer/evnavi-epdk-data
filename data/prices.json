@@ -136,12 +136,12 @@
    "source": "https://ovolt.com.tr/tarifeler",
    "note": "Seçili lokasyonlarda kampanyalı fiyat uygulanabilir.",
    "ac": {
-    "min": 7.91,
-    "max": 7.91
+    "min": 9.99,
+    "max": 9.99
    },
    "dc": {
-    "min": 9.67,
-    "max": 11.87
+    "min": 10.49,
+    "max": 14.49
    },
    "checkedAt": "2026-11-22",
    "stale": false
@@ -287,8 +287,8 @@
     "min": 11.99,
     "max": 13.99
    },
-   "checkedAt": "2026-11-21",
-   "stale": true
+   "checkedAt": "2026-11-22",
+   "stale": false
   },
   {
    "brand": "LUMİCLE",
@@ -305,8 +305,8 @@
     "min": 13.49,
     "max": 13.49
    },
-   "checkedAt": "2026-11-21",
-   "stale": true
+   "checkedAt": "2026-11-22",
+   "stale": false
   },
   {
    "brand": "TORA",
