@@ -1,7 +1,7 @@
 {
  "source": "https://www.kgm.gov.tr/Sayfalar/KGM/SiteTr/Otoyollar/UcretlerYeni.aspx",
  "locations": "© OpenStreetMap katkıcıları",
- "generated": "2026-10-30",
+ "generated": "2026-11-23",
  "tariffs": [
   {
    "id": "1-15Temmuz-FSM",
@@ -4165,8 +4165,8 @@
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Eminlik",
-   "lat": 37.647763,
-   "lon": 34.655882,
+   "lat": 37.64777,
+   "lon": 34.655868,
    "station": 4
   },
   {
@@ -4220,8 +4220,8 @@
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Kemerhisar",
-   "lat": 37.779489,
-   "lon": 34.60526,
+   "lat": 37.779484,
+   "lon": 34.605251,
    "station": 3
   },
   {
@@ -4234,14 +4234,14 @@
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Niğde Güney",
-   "lat": 37.967312,
-   "lon": 34.710805,
+   "lat": 37.967307,
+   "lon": 34.710812,
    "station": 0
   },
   {
    "tariff": "10-CukurovaOtoyoluNigde-Mersin-Adana",
    "name": "Niğde Kuzey",
-   "lat": 38.037642,
+   "lat": 38.037644,
    "lon": 34.744958,
    "station": 1
   },
@@ -5234,8 +5234,8 @@
   {
    "tariff": "17-Ankara-Nigde",
    "name": "Çiftlik",
-   "lat": 38.257702,
-   "lon": 34.629943,
+   "lat": 38.257699,
+   "lon": 34.62993,
    "station": 12
   },
   {
