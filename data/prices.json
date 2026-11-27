@@ -233,8 +233,8 @@
     "min": 13.9,
     "max": 13.9
    },
-   "checkedAt": "2026-11-26",
-   "stale": true
+   "checkedAt": "2026-11-27",
+   "stale": false
   },
   {
    "brand": "i-şarj",
@@ -287,8 +287,8 @@
     "min": 11.99,
     "max": 13.99
    },
-   "checkedAt": "2026-11-26",
-   "stale": true
+   "checkedAt": "2026-11-27",
+   "stale": false
   },
   {
    "brand": "LUMİCLE",
@@ -305,8 +305,8 @@
     "min": 13.49,
     "max": 13.49
    },
-   "checkedAt": "2026-11-26",
-   "stale": true
+   "checkedAt": "2026-11-27",
+   "stale": false
   },
   {
    "brand": "TORA",
@@ -323,8 +323,8 @@
     "min": 13.49,
     "max": 13.49
    },
-   "checkedAt": "2026-11-26",
-   "stale": true
+   "checkedAt": "2026-11-27",
+   "stale": false
   },
   {
    "brand": "efish",
@@ -377,8 +377,8 @@
     "min": 15.49,
     "max": 15.49
    },
-   "checkedAt": "2026-11-26",
-   "stale": true
+   "checkedAt": "2026-11-27",
+   "stale": false
   },
   {
    "brand": "varr TM",
